@@ -1,0 +1,14 @@
+1. git init
+2. pnpm init
+3. npm create cloudflare@latest my-svelte-app -- --framework=svelte
+3.1 do it one more time but in the right directory.
+4. pnpm install
+5. pnpm run dev --open
+(Then realize that there is git in the super folder, oops)
+6. Then look around the folders and files and realize that I dont want to use SvelteKit just now, but only just Svelte.
+6.0.1 Go to cloudflare pages documentation and see by maybe there is a chance that maybe Vite 3 project is more what I want (https://developers.cloudflare.com/pages/framework-guides/deploy-a-vite3-project/)
+6.1 Look at the intro documentation for svelte and find the right commands using only svelte using vite (https://svelte.dev/docs/introduction#start-a-new-project-alternatives-to-sveltekit)
+6.1.1 Look at that, a vite 3 site with svelte is more what I want. Its the same commands.
+7. pnpm create vite@latest (new directory, choose svelte, no typscript, not sveltekit.)
+8. git init (again 🙄)
+
