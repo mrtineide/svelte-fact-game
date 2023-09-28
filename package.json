@@ -4,6 +4,7 @@
   "license": "MIT",
   "version": "0.0.1",
   "author": "Martin E",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
