@@ -1,12 +1,11 @@
 <script>
-  import Counter from './lib/Counter.svelte'
-  import Test from './lib/Test.svelte';
+  import TopBar from "./lib/TopBar.svelte";
+  import CardGame from "./lib/CardGame.svelte";
+  import Footer from "./lib/Footer.svelte";
 </script>
 
 <main>
-  <div class="card">
-    <Test/>
-    <Counter/>
-    <Test/>
-  </div>
+  <TopBar/>
+  <CardGame/>
+  <Footer/>
 </main>
