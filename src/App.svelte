@@ -5,7 +5,7 @@
 </script>
 
 <main>
-  <TopBar/>
-  <CardGame/>
-  <Footer/>
+  <TopBar />
+  <CardGame />
+  <Footer />
 </main>
