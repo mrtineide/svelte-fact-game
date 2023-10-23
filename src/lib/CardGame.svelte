@@ -75,7 +75,6 @@
     let score = 0;
     let checkedAnswers = false;
 
-    
     // function name referance => https://www.youtube.com/watch?v=Z2o4X-WdAZo
     const nextRoundINGAMEHOW = () => {
         checkedAnswers = false;
@@ -110,7 +109,8 @@
     const checkFacts = (e) => {
         const inputNR = myInputs.findIndex((input) => input.checked);
         // console.log("ionputnr " + inputNR);
-        if (inputNR == -1) { // No input/button/fact is checked
+        if (inputNR == -1) {
+            // No input/button/fact is checked
             alert("Pick a option first!");
             return;
         }
@@ -133,11 +133,10 @@
         if (!myInputs[index].checked) {
             // console.log(selectedButton)
             selectedButton = selectedButton.map(() => false); // Makes every button red/not selected
-            selectedButton[index] = true; // Makes the button blue 
-            
+            selectedButton[index] = true; // Makes the button blue
+
             myInputs[index].checked = true;
             // console.log(selectedButton)
-
         }
     }
 
@@ -149,7 +148,6 @@
         duration: 400,
         easing: cubicOut,
     });
-
 </script>
 
 <p>This is the fun fact game, guess the true fact!</p>
@@ -161,7 +159,7 @@
     </legend>
     {#each topics.at(round).facts as fact, index}
         <button
-            class="{selectedButton[index] ? "selected-fact" : "notSelected-fact"}"
+            class={selectedButton[index] ? "selected-fact" : "notSelected-fact"}
             on:click={buttonPressed}
             value={index}
         >
@@ -192,6 +190,10 @@
 <!-- The selected boxes are the ones I want to submit too check if correct -->
 
 <style>
+    p {
+        color: var(--text);
+    }
+
     fieldset {
         display: grid;
     }
@@ -201,8 +203,6 @@
     }
     input {
         background: transparent;
-    }
-    label {
     }
 
     input:hover,
@@ -218,14 +218,16 @@
         box-shadow: 0 6px 10px var(--BoxShadowColour);
     }
     .selected-fact {
-        --SelectedColour: blue;
+        --SelectedColour: #0bf976;
         --BoxShadowColour: var(--SelectedColour);
         background-color: var(--SelectedColour);
+        color:rgb(45,43,1);
     }
 
     .notSelected-fact {
-        --NotSelectedColour: red;
+        --NotSelectedColour: #bec2fd;
         --BoxShadowColour: var(--NotSelectedColour);
         background-color: var(--NotSelectedColour);
+        color:rgb(45,43,1);
     }
 </style>

@@ -4,3 +4,9 @@
         >Link to Github repo for how this was made</a
     >
 </p>
+
+<style>
+    p {
+        color: var(--text);
+    }
+</style>
